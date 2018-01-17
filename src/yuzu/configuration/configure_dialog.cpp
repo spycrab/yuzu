@@ -10,6 +10,8 @@
 ConfigureDialog::ConfigureDialog(QWidget* parent) : QDialog(parent), ui(new Ui::ConfigureDialog) {
     ui->setupUi(this);
     this->setConfiguration();
+
+    setWindowFlags(windowFlags() & ~Qt::WindowContextHelpButtonHint);
 }
 
 ConfigureDialog::~ConfigureDialog() {}
